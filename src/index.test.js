@@ -10,10 +10,10 @@ describe ('our first test', function() {
 });
 
 describe('index.html', function() {
-  it('should say hello', function() {
+  it('should say Development Server', function(done) {
     const index = fs.readFileSync('./src/index.html', 'utf-8');
     jsdom.env(index, function(err, window) {
-      const h1 = window.document.getElementByTagName('h1')[0];
+      const h1 = window.document.getElementsByTagName('h1')[0];
       expect(h1.innerHTML).to.equal("Development Server");
       done();
       window.close();
