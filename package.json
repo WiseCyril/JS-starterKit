@@ -12,8 +12,7 @@
     "localtunnel": "lt --port 3000 --subdomain star",
     "share": "npm-run-all --parallel localtunnel open:src",
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
-    "test:watch": "npm run lint -- --watch"
-
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -63,5 +62,8 @@
     "webpack-dev-middleware": "1.8.4",
     "webpack-hot-middleware": "2.13.0",
     "webpack-md5-hash": "0.0.5"
+  },
+  "dependencies": {
+    "whatwg-fetch": "^3.0.0"
   }
 }
